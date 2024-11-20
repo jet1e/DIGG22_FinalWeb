@@ -584,6 +584,7 @@ footer {
 
 .footer-logo img {
   height: 12vh;
+  width: 12vh;
   border-radius: 50%; /* Make circle */
   object-fit: cover;
 }
@@ -623,6 +624,7 @@ footer {
 
 .footer-socials img {
   height: 4vh;
+  width: 4vh;
   transition: opacity 0.3s;
 }
 
@@ -876,6 +878,7 @@ footer {
     /*Adjust footer sizes*/
     .footer-logo img {
         height: 10vh;
+        width: 10vh;
         padding-top: 10%;
     }
 
