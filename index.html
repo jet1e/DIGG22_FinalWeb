@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">     
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Lilac Valley Farm Stay</title> 
+
+        <meta name="author" content="Jet Tue Hung Le">
+        <meta name="description" content="A3: Final Website">
+        <meta name="keywords" content="...">
+
+        <link rel="stylesheet" href="css/style.css">         
+        <link rel="icon" href="place-your-tab-icon-here.jpg"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=format_quote" />
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+                
+    </head>
+
+        <!--HEADER-->
+        <header>
+            <nav>
+                <!-- LOGO -->
+                <div class="nav-logo">
+                    <a href="#hero-section">
+                        <img src="images/logo.png" alt="Logo">
+                    </a>
+                </div>
+        
+                <!-- Hamburger menu -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <img src="images/burger-icon.png" alt="Menu">
+                </label>
+
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="#booking-section">Book</a>
+                    <a href="#block1">About</a>
+                    <a href="#block4">Testimonial</a>
+                    <a href="#block5">Enquire</a>
+                    <a href="#gallery-section">Gallery</a>
+                </div>
+            </nav>
+        </header>
+
+        <!--MAIN CONTENT-->
+            <section class="section-hero" id="hero-section">
+                <!-- Right side hero image -->
+                <div class="image-hero">
+                    <img src="images/housefront.jpg" alt="">
+                </div>
+
+                <!-- Left side content -->
+                <div class="content-hero">
+                    <h1>Lilac Valley Farm Stay</h1>
+                    <h2>"A stay free from distractions"</h2>
+                    <p>Lilac Valley Farm Stay, owned by interior designer Marina Ye, is a luxurious rustic retreat in the Blue Mountains. Nestled on four acres with sheep, chickens, ducks, and a friendly goat named Rosie, it offers a peaceful escape. </p>
+                    <p>Come stay at our <span class="highlight">award-winning</span> accomodation...</p>
+
+                    <!-- Awards -->
+                    <div class="awards">
+                        <img src="images/award-2022.png" alt="Best Interior Design 2022">
+                        <img src="images/award-2023.png" alt="Rural Home of the Year 2023">
+                        <img src="images/award-2024.png" alt="HIA 2024">
+                    </div>
+
+                    <!-- Enquire now button -->
+                    <a href="#block5">
+                        <button>Enquire Now</button>
+                    </a>
+                </div>
+                
+                <!-- Book now button -->
+                <div class="overlay-button">
+                    <a href="#booking-section">
+                        <button>Book Now</button>
+                    </a>
+                </div>
+
+            </section>
+       
+            <!--SECTION 1-->
+                <section class="section-1">
+                    <!-- About block -->
+                    <div id="block1">
+                        <h1 data-aos="fade-in">About</h1>
+                        <p data-aos="fade-in">Lilac Valley Farm Stay offers a range of thoughtful inclusions for a relaxing stay. Guests can enjoy fresh farm eggs, a fully equipped kitchen, and complimentary Wi-Fi throughout the property. The cozy fireplace adds warmth to the open-plan living space, while the outdoor plunge pool and beautiful garden provide perfect spots to unwind. Eco-friendly toiletries, luxury linens, and plush towels ensure a comfortable experience, making this a truly restful getaway in a picturesque setting.</p>
+                    </div>
+
+                    <!-- Image blocks -->
+                    <div id="block2">
+                        <img src="images/img1.jpg" alt="Garden">
+                    </div>
+
+                    <div id="block3">
+                        <img src="images/img2.jpg" alt="kitchen">
+                    </div>
+
+                    <!-- Testimonial block -->
+                    <div id="block4">
+                        <!-- Set up swiper div structure -->
+                        <div data-aos="fade-in" class="swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Different testimonals -->
+                                <div id="testimonial-1"  class="swiper-slide">
+                                    <span class="material-symbols-outlined flip-quote">
+                                        format_quote
+                                    </span>
+                                    <p class="desc">Staying at Lilac Valley Farm Stay was an unforgettable experience—waking up to serene mountain views, enjoying the cozy barn house, and Rosie the goat made it feel like a true countryside escape!</p>
+                                    <p class="person">- John Doe</p>
+                                </div>
+                                <div id="testimonial-2" class="swiper-slide">
+                                    <span class="material-symbols-outlined flip-quote">
+                                        format_quote
+                                    </span>
+                                    <p class="desc">Our stay at Lilac Valley Farm was magical, with stunning scenery, a charming barn house, and Rosie the goat adding to the charm!</p>
+                                    <p class="person">- Jane Doe</p>
+                                </div>
+                                <div id="testimonial-3" class="swiper-slide">
+                                    <span class="material-symbols-outlined flip-quote">
+                                        format_quote
+                                    </span>
+                                    <p class="desc">Lilac Valley Farm Stay is the perfect countryside retreat—beautiful views, a cozy barn, and the friendliest farm animals made it an amazing getaway</p>
+                                    <p class="person">- Isaac Brun</p>
+                                </div>
+                            </div>
+
+                            <!-- Enable paginator and previous and next buttons from swiper -->
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- Enquiry block -->
+                    <div id="block5">
+                        <div data-aos="fade-in" id="block5-content">
+                            <h1>Enquire</h1>
+                            <p>For further information please contact us using this form. Or phone us on 08 123 456 78</p>
+                        </div>
+                        <div data-aos="fade-in" id="block5-form">
+                            <!-- Text box with animations -->
+                            <!-- Source: https://www.youtube.com/watch?v=Tdzas-IlKSM -->
+                            <div class="form-group">
+                                <input type="text" required>
+                                <div class="labelline">Full Name</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" required>
+                                <div class="labelline">Email</div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" required>
+                                <div class="labelline">Enquiry</div>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                    <!-- Image block -->
+                    <div id="block6">
+                        <img src="images/img3.jpg" alt="Goat eating grass">
+                    </div>
+                </section>
+
+            <!--SECTION 2-->
+               <section class="section-2" id="gallery-section">
+                    <h1>Gallery</h1>
+
+                    <!-- Setup automatic gallery -->
+                    <!-- Source: https://www.youtube.com/watch?v=3Z780EOzIQs -->
+                    <div class="slider">
+                        <div class="slide-track">
+                            <!-- Slides -->
+                            <div class="galery-slide">
+                                <img src="images/img4.jpg" alt="Kitchen">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img5.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img6.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img7.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img8.jpg" alt="">
+                            </div>  
+                            <div class="galery-slide">
+                                <img src="images/img9.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img10.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img11.jpg" alt="">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img12.jpg" alt="">
+                            </div>
+                            
+                            <!-- Slides repeated -->
+                            <div class="galery-slide">
+                                <img src="images/img4.jpg" alt="Kitchen">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img5.jpg" alt="Bathroom">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img6.jpg" alt="2 Lambs">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img7.jpg" alt="Living space">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img8.jpg" alt="bed room">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img9.jpg" alt="Chickens">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img10.jpg" alt="Lounge Room">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img11.jpg" alt="Pool">
+                            </div>
+                            <div class="galery-slide">
+                                <img src="images/img12.jpg" alt="Another living space">
+                            </div>
+                        </div>
+                    </div>
+               </section>
+
+            <!--SECTION 3-->
+            <!-- Booking form -->
+            <section class="section-3" id="booking-section">
+                <div class="image-container">
+                    <img src="images/img4.jpg" alt="">
+                </div>
+                <div  id="booking-form">
+                    <h2 data-aos="fade-in">Book the Perfect Stay Now!</h2>
+                    <form data-aos="fade-in">
+                        <div>
+                            <label for="name">Full-Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="date">Check-In Date</label>
+                            <input type="date" id="checkout-date" required>
+                        </div>
+                        <div>
+                            <label for="date">Check-Out Date</label>
+                            <input type="date" id="checkout-date" required>
+                        </div>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+            </section>
+
+        <!--MAIN CONTENT ENDS-->
+
+        
+        <!--FOOTER-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Lilac Valley Farm Stay Logo">
+                </div>
+                <div class="footer-contact">
+                    <p>
+                        Email:
+                        <a href="mailto:info@lilacvalley.com">info@lilacvalley.com</a>
+                    </p>
+                    <p>
+                        Phone:
+                        <a href="#">08 123 456 78</a>
+                    </p>
+                    <p>
+                        Address:
+                        <a href="#">123 Lilac Valley Boulevard Blue Mountains, 8999, NSW</a>
+                    </p>
+                    <h3>Follow us</h3>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">
+                        <img src="images/facebook.png" alt="Facbook icon">
+                    </a>
+                    <a href="#">
+                        <img src="images/instagram.png" alt="Instgram icon">
+                    </a>
+                    <a href="#">
+                        <img src="images/twitter.png" alt="Twitter Icon">
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <hr>
+                    <p>Website created by Jet Le</p>
+                    <p>This website has been created as part of an assignment in an approved course of study for Curtin
+                        University and contains copyright material not created by the author. All copyright material used
+                        remains copyright of the respective owners and has been used here pursuant to Section 40 of the
+                        Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without
+                        consent of the original copyright owners. See code comments for references.</p>
+                </div>
+            </div>
+        </footer>
+        <!--CONTACT FORM OR TEXT-->
+        <!--SOCIAL MEDIA ?-->
+
+        <!-- Source:  https://www.youtube.com/watch?v=XxG7vqFecR8 -->
+        <!-- Linking SwiperJS script -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Link testimonial script -->
+        <script src="js/testimonial-script.js"></script>
+
+        <!-- Linking smooth scroll -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+
+        <!-- Lining AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body> 
+</html>

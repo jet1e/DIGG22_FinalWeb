@@ -1,0 +1,931 @@
+/* Made by Jet Le for A3 DIG22 Final Assignment */
+
+/* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
+/* Fonts */
+@font-face {
+    font-family: "Inria-Reg";
+    src: url("../fonts/inria-serif-reg.ttf");
+}
+@font-face {
+    font-family: "Inria-Light";
+    src: url("../fonts/inria-serif-light.ttf");
+}
+@font-face {
+    font-family: "Junge";
+    src: url("../fonts/junge.ttf");
+}
+
+/* some basic css resetting */
+body { 
+    margin: 0; 
+    box-sizing: border-box; 
+    height: 100%;
+}
+
+a { text-decoration: none; color:black; }
+
+h1, h2 {
+    font-family: "Junge";
+}
+h1 { font-size: 4vh; }
+h2 { font-size: 3.5vh; }
+p { 
+    font-family: "Inria-Light";
+    font-size: 2.5vh;
+}
+
+/* ==========NAVIGATION============= */
+/* Header Styling */
+header {
+    position: sticky; /* stick to screen*/
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(82, 82, 82, 0.8), rgba(255, 255, 255, 0)); /* make a gradient for nav bar */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 2%;
+    height: 2%;
+}
+
+/* Logo Styling */
+.nav-logo {
+    display: flex;
+    flex: 0 0 auto; /* Keeps logo fixed in its space */
+}
+
+.nav-logo a img {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo a img:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo on hover */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end; /* sens links to end of bar */
+    align-items: center;
+    gap: 20px; /* Space between links */
+}
+
+/* Style the links a */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7ea579; /* Green highlight on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Hide checkbox at start */
+.nav-toggle {
+    display: none;
+}
+
+/* hide burger */
+.nav-toggle-label {
+    display: none; 
+    cursor: pointer; /* Change to the default pointer when hovered */
+}
+
+/* ==========MAIN BODY CONTENT============= */
+/* All images are fit into the containers */
+img{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+} 
+
+/* ==========SECTION 1 STYLING============= */
+.section-hero {
+    display: flex; 
+    height: 100vh; 
+    width: 100%; 
+    justify-content: center;  /* Centre items and align to centre text*/
+    align-items: center; 
+    text-align: center;
+}
+
+.image-hero {
+    flex: 1; /* Take up one half of screen*/
+    height: 100%;
+    overflow: hidden; 
+}
+
+.content-hero {
+    flex: 1; /* Take up other half od screen */
+}
+
+.awards {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images vertically center */ 
+}
+
+/* Image styling for the awards */
+.awards img {
+    width: 5vw; 
+    height: auto;
+    object-fit: contain; 
+    padding-inline: 3%;
+    padding-bottom: 3%;
+}
+
+/* Apply padding and centre text */
+.content-hero h1, .content-hero h2, .content-hero p {
+    padding-bottom: 3%;
+    margin: 0 auto
+}
+
+.content-hero h1 {
+    color: #005C25;
+}
+.content-hero h2 {
+    color: #582000;
+}
+.content-hero p {
+    padding-inline: 10%;
+    padding-top: 3%;
+}
+
+.highlight {
+    font-family: "Inria-Reg";
+    color: #005C25;
+    font-size: 2.75vh;
+}
+
+button {
+    font-family: "Junge";
+    font-size: 2.5vh;
+    color: white;
+    background-color: #582000;
+    padding: 2%;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #82390e;
+}
+
+.overlay-button {
+    position: absolute; /* centre via absolute dimensions - so the button is dead middle of screen*/
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, 150%); 
+    z-index: 10; /* Button is above everything */
+}
+
+.overlay-button button {
+    font-family: "Junge";
+    font-size: 2.5vh;
+    color: #005C25;
+    background-color: white;
+    padding: 1vw 1.5vw;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease;
+}
+
+.overlay-button button:hover {
+    background-color: #6b9567;
+    color: white;
+}
+
+/* ==========SECTION 2 STYLING============= */
+.section-1 {
+    display: flex;
+    flex-wrap: wrap; /* Wrap boxes */
+}
+
+#block1, #block2, #block3, #block4, #block5, #block6 {
+    flex: 48%; /* achieves grid that has pairs of divs */
+    background-color: #ddd; 
+    height: 50vh; 
+    
+}
+
+#block1, #block5 {
+    background-color: #7ea579;
+}
+
+#block4 {
+    background-color: white;
+}
+
+/* Shows the goat image head */
+#block6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top; 
+}
+
+#block1, #block5 {
+    color: white;
+}
+
+#block1 {
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; 
+    text-align: center; 
+}
+#block1 h1, #block1 p {
+    padding-inline: 5%;
+}
+#block1 h1 {
+    padding-top: 5%;
+}
+
+#block4 {
+    display: flex; 
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+#block4 p {
+    padding-top: 0%;
+    padding-inline: 20%;
+    font-family: "Junge";
+}
+#block4 .person {
+    color: #582000;
+}
+.flip-quote{
+    transform: scaleX(-1); /* Flips the quote image */
+}
+
+/* Source: https://www.youtube.com/watch?v=XxG7vqFecR8 */
+#block4 .swiper {
+    height: 100%;
+    width: 90%; 
+    max-width: 48vw; 
+}
+
+/* styling the content for each card */
+#block4 .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; 
+}
+
+/* Styling the paginator and buttons */
+.swiper-button-next, .swiper-button-prev {
+    color: black !important; 
+}
+.swiper-pagination-bullet {
+    background-color:#005C25 !important;
+    opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+    background-color:#005C25 !important;
+    opacity: 1;
+}
+
+#block5 {
+    text-align: center;
+    background-color: #7ea579;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #block5-content {
+    color: white;
+  }
+  
+  #block5 h2, 
+  #block5 p {
+    padding-inline: 10%;
+  }
+  
+  /* Styling the form */
+  /* The following is adapted from https://www.youtube.com/watch?v=Tdzas-IlKSM*/
+  #block5-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    position: relative;
+    width: 50%;
+    height: 40px;
+    margin: 10px 0;
+  }
+  
+  #block5 input {
+    width: 100%;
+    outline: none;
+    position: absolute;
+    font-size: 2vh;
+    padding: 0 30px;
+    line-height: 40px;
+    border: 2px solid white;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1;
+    color: white;
+    box-sizing: border-box;
+    left: 0;
+    border-radius: 10px;
+  }
+  
+  .labelline {
+    position: absolute;
+    font-size: 2vh;
+    padding: 0 10px;
+    color: white;
+    background-color: #7ea579;
+    transition: 0.2s ease;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  input:focus, 
+  input:valid {
+    color: white;
+    border: 4px solid white;
+  }
+  
+  input:focus + .labelline, 
+  input:valid + .labelline {
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    transform: translate(-15px, -36px) scale(0.88);
+    z-index: 2;
+  }
+
+#block5 button {
+    font-family: "Junge";
+    font-size: 2vh;
+    color: #005C25;
+    background-color: white;
+    padding: 1%;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#block5 button:hover {
+    background-color: #6b9567;
+    color: white;
+}
+/* End of adaptation */
+
+/* ==========SECTION 3 STYLING============= */
+/* Adapted from https://www.youtube.com/watch?v=3Z780EOzIQs */
+.section-2 {
+    padding-top: 2.5%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  /* Size of the overall slider */
+  .slider {
+    height: 600px;
+    margin: auto;
+    position: relative;
+    width: 98%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+  /* Size of the track of the slider */
+  .slide-track {
+    display: flex;
+    width: calc(500px * 18); /* Doubled for the clone */
+    animation: scroll 60s linear infinite; /* Infinite scroll*/
+  }
+
+  /* When hover over the slide track it pauses the scroll */
+  .slide-track:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 9)); /* Moves by half the width */
+    }
+  }
+  
+  /* Slides size */
+  .galery-slide {
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+  }
+  
+  .section-2 img {
+    width: 100%;
+    transition: transform 0.3s; 
+  }
+  
+  .section-2 img:hover {
+    transform: translateZ(1vh);
+  }
+  
+  /* Shadows - the mist effect*/
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+/* ==========SECTION 4 STYLING============= */
+.section-3 {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre the content*/
+}
+
+/* Image container with dark overlay */
+.image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Darken the image */
+}
+
+/* Booking Form Styling */
+#booking-form {
+    position: relative;
+    z-index: 1; /* Over the top of the image */
+    background-color: #7ea579; /* Green background */
+    padding: 3%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-family: "Inria-Reg";
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for emphasis */
+    opacity: 90%;
+}
+
+#booking-form h2 {
+    margin-bottom: 5%;
+}
+
+#booking-form form div {
+    margin-bottom: 15px;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#booking-form input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black;
+}
+
+#booking-form button {
+    background-color: white;
+    color: #7ea579;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: #6b9567;
+    color: white;
+}
+
+/* ==========FOOTER STYLING============= */
+footer {
+  background-color: #5C4033;
+  color: white;
+  padding: 2% 1%;
+  font-family: "Junge";
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 12vh;
+  border-radius: 50%; /* Make circle */
+  object-fit: cover;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column; /* Make the contacts a column*/
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.5s;
+}
+
+.footer-contact p {
+    font-size: 1.5vh;
+}
+
+.footer-contact a:hover {
+  color: #7ea579;
+  text-decoration: underline;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row; /* Socials are a row */
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-socials h3 {
+  margin: 0;
+  font-family: "Junge";
+}
+
+
+.footer-socials img {
+  height: 4vh;
+  transition: opacity 0.3s;
+}
+
+/* Add a white circle behind the anchor icons */
+.footer-socials a {
+    background-color: white;
+    border-radius: 50%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+  }
+.footer-socials a:hover img {
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.footer-bottom p {
+  font-size: 1vh;
+  opacity: 0.8;
+}
+
+.footer-bottom p:last-child {
+  font-size: 1vh;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.5;
+}
+
+
+/* ========== DESKTOP (1366 x 768 pixels) ========== */
+@media only screen and (max-width: 1366px) { 
+    /* Resize some text*/
+    #block1 p {
+        font-size: 2.25vh;
+    }
+    #block1 h1 {
+        padding-top: 3%;
+    }
+    
+}
+
+/* ========== TABLET (1024 x 768 pixels) ========== */
+@media only screen and (max-width: 1024px) { 
+    /* Change the size of the booking form */
+    #booking-form {
+        position: relative;
+        z-index: 1;
+        background-color: #7ea579; /* Green background */
+        padding: 3%;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for emphasis */
+    }
+    
+    #booking-form input {
+        width: 100%;
+        padding: 2px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        color: black;
+    }
+}
+
+/* ========== MOBILE (360 x 640 pixels) ========== */
+@media only screen and (max-width: 360px) { 
+    /* Edit hero sizes and orientation*/
+    .section-hero {
+        display: flex;
+        flex-direction: column; /* Stack the image and content vertically */
+        height: 100vh; /* Full screen height */
+        text-align: center;
+        margin: 0;
+        padding-bottom: 5vh;
+    }
+
+    .image-hero, .content-hero {
+        width: 100%; /* Full width for both sections */
+        height: 50vh; /* Each section takes 50% of the screen height */
+        display: flex; 
+        justify-content: center; /* Center */
+        align-items: center; 
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .image-hero {
+        margin-bottom: 10%;
+    }
+
+    .image-hero img {
+        width: 100%; /* Image spans full width */
+        height: 100%; /* Image spans full height */
+        object-fit: cover; 
+    }
+
+    .content-hero {
+        box-sizing: border-box; 
+    }
+
+    .content-hero h1, 
+    .content-hero h2, 
+    .content-hero p, 
+    .content-hero button {
+        margin: 1%; /*spacing*/
+    }
+
+    .overlay-button {
+        position: absolute; /* Keep the button in the middle of the section */
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, 75%); 
+        z-index: 10; 
+    }
+
+    /* size of button */
+    .overlay-button button {
+        padding: 2vw 5vw;
+    }
+
+    .content-hero h1 {
+        font-size: 3vh;
+    }
+    .content-hero h2 {
+        font-size: 2.75vh;
+    }
+    .content-hero p {
+        font-size: 1.85vh;
+    }
+    .highlight {
+        font-size: 2.15vh;
+    }
+    .awards img {
+        width: 10vw;
+        padding-inline: 10%;
+    } 
+
+    /* Section 1 resizing and orientation*/
+    #block1, #block2, #block3, #block4, #block5, #block6 {
+        flex: 100%; /* stack one on top of eachother */
+    }
+    
+    /* Adjust the order of the boxes */
+    #block1 {
+        order: 1;
+    }
+    #block2 {
+        order: 2;
+    }
+    #block3 {
+        order: 4;
+    }
+    #block4 {
+        order: 3;
+    }
+    #block5 {
+        order: 5;
+    }
+    #block6 {
+        order: 6;
+    }
+    /* Sizng */
+    #block1 p {
+        font-size: 2.25vh;
+    }
+    #block1 h1 {
+        padding-top: 3%;
+    }
+
+    #block4 p {
+        font-size: 2vh;
+    }
+    #block4 .swiper {
+        width: 100%; 
+        max-width: 100vw; 
+    }
+    #block5 h2  {
+        font-size: 2.5vh;
+    }
+    #block5 p {
+        font-size: 2vh;
+    }
+    #block5 input {
+        font-size: 1.5vh;
+    }
+
+    /* Section 2 - adjust the slider size*/
+    .form-group {
+        margin: 5px;
+        margin-bottom: 10px;
+      }
+
+    .slider {
+        height: 250px;
+        margin: auto;
+        position: relative;
+        width: 98%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    
+    .slide-track {
+        display: flex;
+        width: calc(250px * 18); /* Doubled for the clone */
+        animation: scroll 60s linear infinite;
+    }
+    .galery-slide {
+        height: 200px;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
+    }
+
+    /*Section 3 - adjust the booking form sizes*/
+    #booking-form {
+        position: relative;
+        z-index: 1;
+        background-color: #7ea579; /* Green background */
+        padding: 3%;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for emphasis */
+    }
+    
+    #booking-form input {
+        width: 100%;
+        padding: 2px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        color: black;
+    }
+
+    /*Adjust footer sizes*/
+    .footer-logo img {
+        height: 10vh;
+        padding-top: 10%;
+    }
+
+
+    nav {
+        padding: 3% 3%;
+        height: 5%;
+    }
+    .nav-logo a img {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    /* Style for burger icon */
+    .nav-toggle-label {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-toggle-label img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        color: #005C25;
+        text-decoration: none;
+    }
+
+    /* Show navigation when checkbox is checked */
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
